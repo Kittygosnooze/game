@@ -1,0 +1,39 @@
+import random 
+def game():
+	print "Do you want to play rock paper scissors?"
+	answer = raw_input("Type yes or no and hit 'Enter'").lower()
+	if answer == "no" or answer == "n":
+		exit(game)
+	elif answer == "yes" or answer == "y":
+		answer = raw_input("Please press 1 for rock, 2 for scissors, or 3 for paper")
+		if answer == "1":
+			computer = random.randint(1,3)
+			if computer == 3:
+				print "you win"
+			if computer == 2:
+				print "you lose"
+			if computer == 1:
+				print "this was a draw"
+		if answer == "2":
+			computer = random.randint(1,3)
+			if computer == 1:
+				print "you win"
+			if computer == 3:
+				print "you lose"
+			if computer == 2:
+				print "this was a draw"
+		if answer == "3":
+			computer= random.randint(1,3)
+			if computer == 2:
+				print "you win"
+			if computer == 1:
+				print "you lose"
+			if computer == 3:
+				print "this was a draw"	 
+	else:
+			print "please type yes or no"
+			
+choice = raw_input('Want to play a game? (y/n)')
+while choice == "y":
+	game()		
+	choice = raw_input('Want to play again? (y/n)')
